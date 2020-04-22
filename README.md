@@ -1,4 +1,4 @@
-# Homebrew
+# Homebrew ![homebrew](https://github.com/returntocorp/homebrew-semgrep/workflows/homebrew/badge.svg)
 This directory contains the code to build homebrew formulas for semgrep.
 
 ## How it works
