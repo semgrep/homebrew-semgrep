@@ -1,5 +1,8 @@
 # Homebrew ![homebrew](https://github.com/returntocorp/homebrew-semgrep/workflows/homebrew/badge.svg)
-This directory contains the code to build homebrew formulas for semgrep.
+This directory contains the code to build homebrew formulas for semgrep. 3 versions are provided:
+1. `brew install returntocorp/semgrep/semgrep`: Stable. This installs the latest release
+2. `brew install returntocorp/semgrep/semgrep --devel`: This installs the latest *beta or alpha* release. It must be manually configured / pushed.
+3. `brew install returntocorp/semgrep/semgrep --HEAD`: This installs the `cli` from the develop branch, and the `core` from the latest beta release. This mostly exists to ensure that we won't dig ourselves into a hole during development in a way that will break the homebrew recipe in the future.
 
 ## How it works
 The formula works in two parts:
