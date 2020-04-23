@@ -3,8 +3,6 @@ class Semgrep < Formula
   desc "Like grep but for code"
   homepage "https://github.com/returntocorp/sgrep"
 
-  head "https://github.com/returntocorp/sgrep.git", :branch => "develop"
-
   stable do
     url "https://github.com/returntocorp/sgrep/archive/v0.4.9.tar.gz"
     sha256 "e84eed277e58398f18a345756d533cadf4dea28025a4c4dc2ce47232997e7ad4"
@@ -13,6 +11,28 @@ class Semgrep < Formula
     patch do
       url "https://github.com/returntocorp/sgrep/commit/f71a9ccb520c9f7a4eddc93e3e0f80c946741c3d.diff?full_index=1"
       sha256 "3568550fb88764a596fef71728ec0e91d1716e29b049788ea7e2c3d2d9569c87"
+    end
+    resource "ocaml-binary" do
+      url "https://github.com/returntocorp/sgrep/releases/download/v0.4.9/sgrep-0.4.9-osx.zip"
+      sha256 "7e710b5c912dfadb0919349b3e5fc60570aba12eb78313ad37adb1487263d018"
+    end
+  end
+
+  devel do
+    url "https://github.com/returntocorp/sgrep/archive/v0.5.0b1.tar.gz"
+    sha256 "34742d2661d023ed984bf0bcd31fec25711798d1c57e667b463a7b9916ec2c47"
+    resource "ocaml-binary" do
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.5.0b1/semgrep-v0.5.0b1-osx.zip"
+      sha256 "26756cad63011f305033933937c7649ffcedffd9382e2ff42b893ba6e89ff9d5"
+    end
+  end
+
+  head do
+    url "https://github.com/returntocorp/sgrep.git", :branch => "develop"
+    resource "ocaml-binary" do
+      # TODO: point this at the develop branch URL for the semgrep binary
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.5.0b1/semgrep-v0.5.0b1-osx.zip"
+      sha256 "26756cad63011f305033933937c7649ffcedffd9382e2ff42b893ba6e89ff9d5"
     end
   end
 
@@ -54,22 +74,21 @@ class Semgrep < Formula
     sha256 "87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
   end
 
-  resource "ocaml-binary" do
-    url "https://github.com/returntocorp/sgrep/releases/download/v0.4.9/sgrep-0.4.9-osx.zip"
-    sha256 "7e710b5c912dfadb0919349b3e5fc60570aba12eb78313ad37adb1487263d018"
-  end
-
   def install
     (buildpath/"ocaml-binary").install resource("ocaml-binary")
-    cp "ocaml-binary/sgrep", "ocaml-binary/sgrep-core"
-    cp "ocaml-binary/sgrep", "ocaml-binary/semgrep-core"
-    bin.install "ocaml-binary/sgrep-core"
+    # Older releases don't have a semgrep-core already built
+    if build.stable?
+      cp "ocaml-binary/sgrep", "ocaml-binary/sgrep-core"
+      cp "ocaml-binary/sgrep", "ocaml-binary/semgrep-core"
+      bin.install "ocaml-binary/sgrep-core"
+    end
+
     bin.install "ocaml-binary/semgrep-core"
 
-    if build.head?
-      python_path = "semgrep"
+    python_path = if build.head? || build.devel?
+      "semgrep"
     else
-      python_path = "sgrep_lint"
+      "sgrep_lint"
     end
 
     cd python_path do
