@@ -31,6 +31,17 @@ jobs:
         run: brew test --HEAD ./HomebrewFormula/semgrep.rb
       - name: sanity
         run: semgrep --help
+  test-homebrew-devel:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Homebrew install
+        run: brew install --devel ./HomebrewFormula/semgrep.rb
+      - name: Homebrew test
+        run: brew test --devel ./HomebrewFormula/semgrep.rb
+      - name: sanity
+        run: semgrep --help
   test-homebrew-published:
     runs-on: macos-latest
     steps:
