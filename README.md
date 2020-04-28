@@ -14,8 +14,8 @@ The formula works in two parts:
 **Note: as defined in `setup.py`, the executable is called sgrok until someone tells me otherwise. It cannot be called `sgrep`.** When you want to change this, you'll want to update the patch and change the checksum.
 
 ## Updating the brew formula for a new release
-It takes about 5 minutes. I'm not sure if this is worth automating at the moment. 
-0. Bump the version on the formula. If you do not do this, `brew upgrade` will not work for people.
+It takes about 5 minutes. I'm not sure if this is worth automating at the moment.
+
 1. Change this block to point to the new release.
 ```ruby
   stable do
