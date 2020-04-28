@@ -74,7 +74,9 @@ class Semgrep < Formula
 
     bin.install "ocaml-binary/semgrep-core"
 
-    cd "semgrep" do
+    python_path = "semgrep"
+
+    cd python_path do
       venv = virtualenv_create(libexec, Formula["python@3.8"].bin/"python3.8")
       python_deps = resources.reject do |resource|
         resource.name == "ocaml-binary"
