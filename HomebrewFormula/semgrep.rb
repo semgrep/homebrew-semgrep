@@ -14,11 +14,11 @@ class Semgrep < Formula
   end
 
   devel do
-    url "https://github.com/returntocorp/semgrep/archive/v0.6.0b1.tar.gz"
-    sha256 "f728aa485d99a334b7129d19eddb3e24467ed386262ea0a2196a957b48ce883c"
+    url "https://github.com/returntocorp/semgrep/archive/v0.6.1b1.tar.gz"
+    sha256 "1e2948b48d937b303649b062013b9a2eae839a7f72276ad02686727b2bb4ea7f"
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.6.0b1/semgrep-v0.6.0b1-osx.zip"
-      sha256 "9b58dfdab48c1dd1e485904e490f8778b50423ae448dec69c4c0c6a09ac39995"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.6.1b1/semgrep-v0.6.1b1-osx.zip"
+      sha256 "0a4b1e0cc6d375d042796f6632b1f3c08e6cef584b58677d2eeb28e603cdf426"
     end
   end
 
