@@ -31,7 +31,6 @@ class Semgrep < Formula
     end
   end
 
-  depends_on "coreutils"
   depends_on "python@3.8"
 
   resource "certifi" do
