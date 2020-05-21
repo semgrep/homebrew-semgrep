@@ -5,7 +5,7 @@ class Semgrep < Formula
 
   stable do
     url "https://github.com/returntocorp/semgrep/archive/v0.8.0.tar.gz"
-    sha256 "8cddefac4cfd577fcb47d1ce1cfe73430e6aa7618afd4776fff839248ef65ad3"
+    sha256 "69523db2fe22e4dfb50fb8ea5a1fec3f520204b066122c4b26c2c4d6bca61bf9"
 
     resource "ocaml-binary" do
       url "https://github.com/returntocorp/semgrep/releases/download/v0.8.0/semgrep-v0.8.0-osx.zip"
@@ -15,11 +15,11 @@ class Semgrep < Formula
 
   devel do
     url "https://github.com/returntocorp/semgrep/archive/v0.8.0b1.tar.gz"
-    sha256 "90396ed84be1fcf8ba8f07f4cb3fe96d9587e5b7a10222159f3336b18176e282"
+    sha256 "dd8c72ff5d5cb63a0b8eecab9bcc6d6729813d01fd0a4f75e1e42a20e6731fdd"
 
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.8.0b1/semgrep-v0.8.0b1-osx.zip"
-      sha256 "d11f16eb5812c891fdb8644332a1a6c4e4fb40ddcc41cdd1129173a8ae621426"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.8.0/semgrep-v0.8.0-osx.zip"
+      sha256 "5eae93089f72776e8a8cffccf09dedc8af0f7d228b237bc0693a19da80811922"
     end
   end
 
@@ -27,8 +27,8 @@ class Semgrep < Formula
     url "https://github.com/returntocorp/semgrep.git", :branch => "develop"
     resource "ocaml-binary" do
       # TODO: point this at the develop branch URL for the semgrep binary
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.8.0b1/semgrep-v0.8.0b1-osx.zip"
-      sha256 "d11f16eb5812c891fdb8644332a1a6c4e4fb40ddcc41cdd1129173a8ae621426"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.8.0/semgrep-v0.8.0-osx.zip"
+      sha256 "5eae93089f72776e8a8cffccf09dedc8af0f7d228b237bc0693a19da80811922"
     end
   end
 
