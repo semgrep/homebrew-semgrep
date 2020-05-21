@@ -15,7 +15,7 @@ class Semgrep < Formula
 
   devel do
     url "https://github.com/returntocorp/semgrep/archive/v0.8.0b1.tar.gz"
-    sha256 "90396ed84be1fcf8ba8f07f4cb3fe96d9587e5b7a10222159f3336b18176e282"
+    sha256 "dd8c72ff5d5cb63a0b8eecab9bcc6d6729813d01fd0a4f75e1e42a20e6731fdd"
 
     resource "ocaml-binary" do
       url "https://github.com/returntocorp/semgrep/releases/download/v0.8.0/semgrep-v0.8.0-osx.zip"
