@@ -15,12 +15,13 @@ class Semgrep < Formula
   end
 
   devel do
-    url "https://github.com/returntocorp/semgrep/archive/v0.9.0b1.tar.gz"
-    sha256 "cc922d98248c91f3ed9477ec0df8b254b8ef55471d17ab5894ad31fed67b8f24"
+    url "https://github.com/returntocorp/semgrep.git",
+    :tag      => "v0.10.0b1",
+    :revision => "801342cec901f10aa51c08731b66b66996b3d35e"
 
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.9.0b1/semgrep-v0.9.0b1-osx.zip"
-      sha256 "cc4a9d8ae60ae91cd5ea317f25aacb2ad03931ea856bab8d5dcfbf0fd9643a9d"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.10.0b1/semgrep-v0.10.0b1-osx.zip"
+      sha256 "b369d4bee6e066b593e2c50442424b2426f35a48c373a2c0d723897c8c08acdd"
     end
   end
 
@@ -73,6 +74,16 @@ class Semgrep < Formula
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/98/c3/2c227e66b5e896e15ccdae2e00bbc69aa46e9a8ce8869cc5fa96310bf612/attrs-19.3.0.tar.gz"
     sha256 "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"
+  end
+
+  resource "ruamel.yaml" do
+    url "https://files.pythonhosted.org/packages/16/8b/54a26c1031595e5edd0e616028b922d78d8ffba8bc775f0a4faeada846cc/ruamel.yaml-0.16.10.tar.gz"
+    sha256 "099c644a778bf72ffa00524f78dd0b6476bca94a1da344130f4bf3381ce5b954"
+  end
+
+  resource "ruamel.yaml.clib" do
+    url "https://files.pythonhosted.org/packages/92/28/612085de3fae9f82d62d80255d9f4cf05b1b341db1e180adcf28c1bf748d/ruamel.yaml.clib-0.2.0.tar.gz"
+    sha256 "b66832ea8077d9b3f6e311c4a53d06273db5dc2db6e8a908550f3c14d67e718c"
   end
 
   def install
