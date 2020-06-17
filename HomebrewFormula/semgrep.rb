@@ -16,12 +16,12 @@ class Semgrep < Formula
 
   devel do
     url "https://github.com/returntocorp/semgrep.git",
-    :tag      => "v0.10.1b1",
-    :revision => "380824711477827e56c34ae4f6943a03e6e36235"
+    :tag      => "v0.11.0b1",
+    :revision => "3caebc176a67856700fbdea6ea4e3b5488d9828e"
 
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.10.1b1/semgrep-v0.10.1b1-osx.zip"
-      sha256 "33acc1950dd276337fccec762bbbc3fe0803e8fb2dc8a59e28e1060de31f0cf6"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.11.0b1/semgrep-v0.11.0b1-osx.zip"
+      sha256 "46675d917821e5e2a72d126add193a4739abba34e0d2de85f26727704c5506c2"
     end
   end
 
@@ -29,8 +29,8 @@ class Semgrep < Formula
     url "https://github.com/returntocorp/semgrep.git", :branch => "develop"
     resource "ocaml-binary" do
       # TODO: point this at the develop branch URL for the semgrep binary
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.9.0/semgrep-v0.9.0-osx.zip"
-      sha256 "b651d45a6c396a4f9e3978c4c7423e6e2c7aba7f45e841eb4d8e6cddccc476da"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.11.0b1/semgrep-v0.11.0b1-osx.zip"
+      sha256 "46675d917821e5e2a72d126add193a4739abba34e0d2de85f26727704c5506c2"
     end
   end
 
@@ -79,6 +79,11 @@ class Semgrep < Formula
   resource "ruamel.yaml" do
     url "https://files.pythonhosted.org/packages/16/8b/54a26c1031595e5edd0e616028b922d78d8ffba8bc775f0a4faeada846cc/ruamel.yaml-0.16.10.tar.gz"
     sha256 "099c644a778bf72ffa00524f78dd0b6476bca94a1da344130f4bf3381ce5b954"
+  end
+
+  resource "tqdm" do
+    url "https://files.pythonhosted.org/packages/a9/03/df1d77e852dd697c0ff7b7b1b9888739517e5f97dfbd2cf7ebd13234084c/tqdm-4.46.1.tar.gz"
+    sha256 "cd140979c2bebd2311dfb14781d8f19bd5a9debb92dcab9f6ef899c987fcf71f"
   end
 
   resource "ruamel.yaml.clib" do
