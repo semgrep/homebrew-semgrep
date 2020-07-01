@@ -16,12 +16,12 @@ class Semgrep < Formula
 
   devel do
     url "https://github.com/returntocorp/semgrep.git",
-    :tag      => "v0.11.0b1",
-    :revision => "3caebc176a67856700fbdea6ea4e3b5488d9828e"
+    :tag      => "v0.13.0b1",
+    :revision => "ac3e50e72a3adc83730897926ac2bef95821612f"
 
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.11.0b1/semgrep-v0.11.0b1-osx.zip"
-      sha256 "46675d917821e5e2a72d126add193a4739abba34e0d2de85f26727704c5506c2"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.13.0b1/semgrep-v0.13.0b1-osx.zip"
+      sha256 "f3314b0c2954a25918fd91c282ed3d4e59c5145af99fbed8b6e52ea2335b6543"
     end
   end
 
@@ -89,6 +89,21 @@ class Semgrep < Formula
   resource "ruamel.yaml.clib" do
     url "https://files.pythonhosted.org/packages/92/28/612085de3fae9f82d62d80255d9f4cf05b1b341db1e180adcf28c1bf748d/ruamel.yaml.clib-0.2.0.tar.gz"
     sha256 "b66832ea8077d9b3f6e311c4a53d06273db5dc2db6e8a908550f3c14d67e718c"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz"
+    sha256 "4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"
+  end
+
+  resource "pyparsing" do
+    url "https://files.pythonhosted.org/packages/a2/56/0404c03c83cfcca229071d3c921d7d79ed385060bbe969fde3fd8f774ebd/pyparsing-2.4.6.tar.gz"
+    sha256 "4c830582a84fb022400b85429791bc551f1f4871c33f23e44f353119e92f969f"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz"
+    sha256 "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"
   end
 
   def install
