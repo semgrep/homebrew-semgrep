@@ -27,10 +27,10 @@ class Semgrep < Formula
 
   head do
     url "https://github.com/returntocorp/semgrep.git", :branch => "develop"
+    # TODO: point this at the develop branch URL for the semgrep binary
     resource "ocaml-binary" do
-      # TODO: point this at the develop branch URL for the semgrep binary
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.11.0b1/semgrep-v0.11.0b1-osx.zip"
-      sha256 "46675d917821e5e2a72d126add193a4739abba34e0d2de85f26727704c5506c2"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.13.0b1/semgrep-v0.13.0b1-osx.zip"
+      sha256 "f3314b0c2954a25918fd91c282ed3d4e59c5145af99fbed8b6e52ea2335b6543"
     end
   end
 
