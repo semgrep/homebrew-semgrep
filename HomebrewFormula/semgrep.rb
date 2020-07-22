@@ -16,12 +16,12 @@ class Semgrep < Formula
 
   devel do
     url "https://github.com/returntocorp/semgrep.git",
-    :tag      => "v0.15.0b2",
-    :revision => "5e068f1efb14362b52e95c8053013befedcb7abf"
+    :tag      => "v0.16.0b1",
+    :revision => "341c90f8500004b5a1feeba6b2ba8b7898485c05"
 
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.15.0b2/semgrep-v0.15.0b2-osx.zip"
-      sha256 "dd11850d29a4f1ff1ac0e0c58c2ce869ea8cc98d8c27687f9b29718ec9d79db9"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.16.0b1/semgrep-v0.16.0b1-osx.zip"
+      sha256 "d1624b88aeb47529f5f898b3f5c7304e70c5a61fba0ab6f52e952bb2d52f58d6"
     end
   end
 
@@ -29,8 +29,8 @@ class Semgrep < Formula
     url "https://github.com/returntocorp/semgrep.git", :branch => "develop"
     # TODO: point this at the develop branch URL for the semgrep binary
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.15.0b2/semgrep-v0.15.0b2-osx.zip"
-      sha256 "dd11850d29a4f1ff1ac0e0c58c2ce869ea8cc98d8c27687f9b29718ec9d79db9"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.16.0b1/semgrep-v0.16.0b1-osx.zip"
+      sha256 "d1624b88aeb47529f5f898b3f5c7304e70c5a61fba0ab6f52e952bb2d52f58d6"
     end
   end
 
