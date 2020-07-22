@@ -5,12 +5,12 @@ class Semgrep < Formula
 
   stable do
     url "https://github.com/returntocorp/semgrep.git",
-    :tag      => "v0.15.0",
-    :revision => "b06d8aa793f57d543383efab6d5591f00fd79207"
+    :tag      => "v0.16.0",
+    :revision => "26bb98d50dd1350aee49ea9a345c12c271c9b0f4"
 
     resource "ocaml-binary" do
-      url "https://github.com/returntocorp/semgrep/releases/download/v0.15.0/semgrep-v0.15.0-osx.zip"
-      sha256 "d3195276355d6541fb580f7810b47a8c939d2fed1288af37bc538eeca49773f4"
+      url "https://github.com/returntocorp/semgrep/releases/download/v0.16.0/semgrep-v0.16.0-osx.zip"
+      sha256 "82024aa2901231b43b75c3c024a150f0107a0511b0d6950b47eb896c27a0a45a"
     end
   end
 
