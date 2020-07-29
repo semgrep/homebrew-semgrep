@@ -1,3 +1,7 @@
+# semgrep is available on homebrew-core
+See: https://github.com/Homebrew/homebrew-core/blob/master/Formula/semgrep.rb 
+Install with `brew install semgrep` 
+
 # Homebrew ![homebrew](https://github.com/returntocorp/homebrew-semgrep/workflows/homebrew/badge.svg)
 This directory contains the code to build homebrew formulas for semgrep. 3 versions are provided:
 1. `brew install returntocorp/semgrep/semgrep`: Stable. This installs the latest release
